@@ -53,6 +53,7 @@ type Options struct {
 	ExcludeTags             []string
 	SetXNullableForPointers bool
 	RefAliases              bool // aliases result in $ref, otherwise aliases are expanded
+	TransparentAliases      bool // aliases are completely transparent, never creating definitions
 }
 
 type scanCtx struct {
@@ -101,6 +102,7 @@ func newScanCtx(opts *Options) (*scanCtx, error) {
 		withExcludePkgs(opts.Exclude),
 		withXNullableForPointers(opts.SetXNullableForPointers),
 		withRefAliases(opts.RefAliases),
+		withTransparentAliases(opts.TransparentAliases),
 	)
 	if err != nil {
 		return nil, err
@@ -509,6 +511,12 @@ func withRefAliases(enabled bool) typeIndexOption {
 	}
 }
 
+func withTransparentAliases(enabled bool) typeIndexOption {
+	return func(a *typeIndex) {
+		a.transparentAliases = enabled
+	}
+}
+
 func newTypeIndex(pkgs []*packages.Package, opts ...typeIndexOption) (*typeIndex, error) {
 	ac := &typeIndex{
 		AllPackages: make(map[string]*packages.Package),
@@ -541,6 +549,7 @@ type typeIndex struct {
 	excludePkgs             []string
 	setXNullableForPointers bool
 	refAliases              bool
+	transparentAliases      bool
 }
 
 func (a *typeIndex) build(pkgs []*packages.Package) error {
