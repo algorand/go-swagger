@@ -8,7 +8,7 @@ import (
 	"github.com/jessevdk/go-flags"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands/generate"
+	"github.com/algorand/go-swagger/cmd/swagger/commands/generate"
 )
 
 func TestGenerateServer(t *testing.T) {
@@ -49,7 +49,7 @@ func TestRegressionIssue2601(t *testing.T) {
 
 			// Error was coming from these two being set together
 			m.Shared.StrictResponders = true
-			m.ImplementationPackage = "github.com/go-swagger/go-swagger/fixtures/codegen/impl"
+			m.ImplementationPackage = "github.com/algorand/go-swagger/fixtures/codegen/impl"
 
 			// Load new copy of template
 			m.Shared.AllowTemplateOverride = true

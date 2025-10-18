@@ -17,7 +17,7 @@ func loadGo118ClassificationPkgsCtx(t testing.TB, extra ...string) *scanCtx {
 	}
 	sctx, err := newScanCtx(&Options{
 		Packages: append([]string{
-			"github.com/go-swagger/go-swagger/fixtures/goparsing/go118",
+			"github.com/algorand/go-swagger/fixtures/goparsing/go118",
 		}, extra...),
 	})
 	require.NoError(t, err)
@@ -26,7 +26,7 @@ func loadGo118ClassificationPkgsCtx(t testing.TB, extra ...string) *scanCtx {
 }
 
 func getGo118ClassificationModel(sctx *scanCtx, nm string) *entityDecl {
-	decl, ok := sctx.FindDecl("github.com/go-swagger/go-swagger/fixtures/goparsing/go118", nm)
+	decl, ok := sctx.FindDecl("github.com/algorand/go-swagger/fixtures/goparsing/go118", nm)
 	if !ok {
 		return nil
 	}

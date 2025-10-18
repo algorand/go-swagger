@@ -210,7 +210,7 @@
             {{- end }}
             {{ if and .IsTuple .AdditionalItems }}
       // TODO: context validating additional items should go here, if you see this raise an issue{{/* TODO(fred): investigate the case to remove that comment: AdditionalItems shouldn't come in maps. Upstream validation is needed to guard against this */}}
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
             {{ end }}
           {{ else }}
             {{ template "primitivefieldcontextvalidator" . }}
@@ -218,7 +218,7 @@
         {{- else if and .IsCustomFormatter (or .HasValidations .Required) }}{{/* custom format not captured as primitive */}}
           {{- if and (not .IsStream) (not .IsBase64) }}{{/* TODO: IsStream and CustomFormattershould be mutually exclusive in type resolver */}}
       // TODO: context validating custom formatter items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
             {{/*
             {{ template "validationCustomformat" . }}
             */}}
@@ -258,7 +258,7 @@
           {{- end }}
           {{ if and .IsTuple .AdditionalItems }}
       // TODO: context validating additional items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
           {{ end }}
         {{- end }}
     }
@@ -355,7 +355,7 @@
             {{- end }}
             {{ if and .IsTuple .AdditionalItems }}
       // TODO: validating additional items should go here, if you see this raise an issue{{/* TODO(fred): investigate the case to remove that comment: AdditionalItems shouldn't come in maps. Upstream validation is needed to guard against this */}}
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
             {{ end }}
           {{- else }}
             {{ template "primitivefieldvalidator" . }}
@@ -419,7 +419,7 @@
           {{- end }}
           {{ if and .IsTuple .AdditionalItems }}
       // TODO: validating additional items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
           {{ end }}
         {{ end }}
     }
@@ -518,7 +518,7 @@
   {{- end }}
   {{- if and .IsTuple .AdditionalItems }}
     // TODO: context validating additional items should go here, if you see this raise an issue
-    // at https://github.com/go-swagger/go-swagger/issues
+    // at https://github.com/algorand/go-swagger/issues
   {{- end }}
 {{ end }}
 {{ define "minmaxProperties" }}
@@ -624,7 +624,7 @@
   {{- end }}
   {{- if and .IsTuple .AdditionalItems }}
     // TODO: validating additional items should go here, if you see this raise an issue
-    // at https://github.com/go-swagger/go-swagger/issues
+    // at https://github.com/algorand/go-swagger/issues
   {{- end }}
 {{ end }}
 
@@ -637,7 +637,7 @@
     {{- end }}
     {{- else if and .IsCustomFormatter (or .HasValidations .Required) }}{{/* custom format not captured as primitive */}}
     // TODO: context validating primitive with custom formatter should go here, if you see this raise an issue
-    // at https://github.com/go-swagger/go-swagger/issues
+    // at https://github.com/algorand/go-swagger/issues
     {{- if .ReadOnly }}
 
   if err := validate.ReadOnly{{ if and (eq .GoType "string") (not .IsNullable) }}String{{ end }}({{ path . }}, {{ printf "%q" .Location }}, {{.ValueExpression }}; err != nil {
@@ -646,7 +646,7 @@
     {{- end }}
     {{- if and (not .IsStream) (not .IsBase64) }}
   // TODO: context validating properties with custom formatter should go here, if you see this raise an issue
-  // at https://github.com/go-swagger/go-swagger/issues
+  // at https://github.com/algorand/go-swagger/issues
     {{/*{{ template "validationCustomformat" . }}*/}}
     {{- end }}
   {{- else if .IsArray }}
@@ -717,7 +717,7 @@
   {{- else if and .IsCustomFormatter (or .HasValidations .Required) }}{{/* custom format not captured as primitive */}}
     {{- if and (not .IsStream) (not .IsBase64) }}
       // TODO: context validating properties with custom formatter should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
       {{/*
       {{ template "validationCustomformat" . }}
       */}}
@@ -771,7 +771,7 @@ func ({{.ReceiverName }} {{ if or .IsTuple .IsComplexObject .IsAdditionalPropert
       {{- end }}
       {{ if and .IsTuple .AdditionalItems }}
       // TODO: context validating additional items should go here, if you see this raise an issue
-      // at https://github.com/go-swagger/go-swagger/issues
+      // at https://github.com/algorand/go-swagger/issues
       {{/*
       if err := {{ .ReceiverName }}.validate{{ pascalize .Name }}Items(formats); err != nil {
         res = append(res, err)

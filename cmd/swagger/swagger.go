@@ -21,7 +21,7 @@ import (
 
 	flags "github.com/jessevdk/go-flags"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands"
+	"github.com/algorand/go-swagger/cmd/swagger/commands"
 )
 
 var opts struct {

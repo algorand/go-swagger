@@ -11,7 +11,7 @@ import (
 
 	"github.com/go-openapi/loads"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands/internal/cmdtest"
+	"github.com/algorand/go-swagger/cmd/swagger/commands/internal/cmdtest"
 )
 
 func fixturePath(file string, parts ...string) string {

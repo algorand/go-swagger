@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands/diff"
+	"github.com/algorand/go-swagger/cmd/swagger/commands/diff"
 )
 
 func TestMatches(t *testing.T) {

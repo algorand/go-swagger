@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands/generate"
+	"github.com/algorand/go-swagger/cmd/swagger/commands/generate"
 )
 
 // Make sure generated code compiles

@@ -21,7 +21,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/go-swagger/go-swagger/codescan"
+	"github.com/algorand/go-swagger/codescan"
 
 	"github.com/jessevdk/go-flags"
 	"gopkg.in/yaml.v3"

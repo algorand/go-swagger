@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/loads"
 	"github.com/go-openapi/spec"
 
-	"github.com/go-swagger/go-swagger/generator"
+	"github.com/algorand/go-swagger/generator"
 )
 
 const (

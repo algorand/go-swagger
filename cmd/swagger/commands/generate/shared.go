@@ -13,7 +13,7 @@ import (
 	"github.com/go-openapi/analysis"
 	"github.com/go-openapi/swag"
 
-	"github.com/go-swagger/go-swagger/generator"
+	"github.com/algorand/go-swagger/generator"
 )
 
 // FlattenCmdOptions determines options to the flatten spec preprocessing

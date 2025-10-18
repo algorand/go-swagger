@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/go-swagger/go-swagger/generator"
+	"github.com/algorand/go-swagger/generator"
 )
 
 func TestDeprecatedFlag(t *testing.T) {

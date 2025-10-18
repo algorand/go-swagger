@@ -7,7 +7,7 @@ import (
 	flags "github.com/jessevdk/go-flags"
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-swagger/go-swagger/cmd/swagger/commands/generate"
+	"github.com/algorand/go-swagger/cmd/swagger/commands/generate"
 )
 
 func TestMarkdown(t *testing.T) {

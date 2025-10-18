@@ -130,10 +130,10 @@ func TestRoutesParser(t *testing.T) {
 func TestRoutesParserBody(t *testing.T) {
 	sctx, err := newScanCtx(&Options{
 		Packages: []string{
-			"github.com/go-swagger/go-swagger/fixtures/goparsing/classification",
-			"github.com/go-swagger/go-swagger/fixtures/goparsing/classification/models",
-			"github.com/go-swagger/go-swagger/fixtures/goparsing/classification/operations",
-			"github.com/go-swagger/go-swagger/fixtures/goparsing/classification/operations_body",
+			"github.com/algorand/go-swagger/fixtures/goparsing/classification",
+			"github.com/algorand/go-swagger/fixtures/goparsing/classification/models",
+			"github.com/algorand/go-swagger/fixtures/goparsing/classification/operations",
+			"github.com/algorand/go-swagger/fixtures/goparsing/classification/operations_body",
 		},
 	})
 	require.NoError(t, err)
